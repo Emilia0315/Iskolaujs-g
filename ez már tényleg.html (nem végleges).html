@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <domain>Gimi-News</domain>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRG-NEWS</title>
+    <link rel="stylesheet" href="stílus.css">
+</head>
+<body> 
+    <style>
+      /* Alap stílusok */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #1a1111;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fejléc */
+header {
+    background-color: rgb(73, 18, 18);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 15 rgb(37, 37, 37));
+}
+
+/* Navigáció */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #160c30; /* Hover szín */
+}
+
+/* Címek és szövegek stílusai */
+h1, h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #333;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+/* Főoldal címek */
+h1 {
+    font-size: 2.5rem;
+    color: rgb(226, 214, 214);
+    background: linear-gradient(to right, #4CAF50, #81C784);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #1e1a38;
+    border-bottom: 3px solid #0f2710;
+    padding-bottom: 5px;
+}
+
+/* Cikkek */
+article {
+    background-color: rgb(226, 214, 214);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(226, 214, 214);
+}
+
+article h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-left: 30px;
+}
+
+article h3::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.8rem;
+    color: rgb(73, 18, 18));
+    transition: transform 0.3s ease;
+}
+
+article h3:hover::before {
+    transform: translateX(5px); /* Hover animáció */
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Események és interjúk */
+.events, .interviews {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.events article, .interviews article {
+    background-color: rgb(226, 214, 214);
+    border-left: 5px solid rgb(rgb(24, 24, 82));
+}4
+.image-grid {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.image-grid img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .image-grid {
+        flex-direction: column;
+    }
+}
+
+footer {
+    background-color: rgb(73, 18, 18);
+    color: rgb(247, 230, 230);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
+}
+  
+    </style>
+    <header>
+        <h1>Rózsakerti Gimi-News</h1>
+        <h3>"Az igazsághoz ragazkodva növekedjünk fel szeretetben..."</h3>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hírek</a></li>
+                <li><a href="események.html">Események</a></li>
+                <li><a href="interjúk.html">Interjúk</a></li>
+                <li><a href="galéria.html">Képgaléria</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="news">
+            <h2>Legfrissebb Hírek</h2>
+            <article>
+                <h3>Új iskolaév kezdődött!</h3>
+                <p>A 2024-es tanév izgalmas újdonságokkal indul...</p>
+            </article>
+            <article>
+                <h3>Mikuláskupa eredmények</h3>
+                <p>A csendesnapok témája</p>
+            </article>
+            <!-- További hírek -->
+        </section>
+    </main>
+
+    <main>
+        <section class="events">
+            <h2>Közelgő Események</h2>
+            <article>
+                <h3>Iskolai Kirándulások</h3>
+                <p>Dátum: 2024. november 30.<br>Helyszín: Balaton</p>
+            </article>
+            <article>
+                <h3>Karácsonyi szünet indító (vissza számláló) </h3>
+                <p>Dátum: 2024. december 15.<br>Helyszín: Iskola aulája</p>
+            </article>
+            <!-- További események -->
+        </section>
+    </main>
+
+    <main>
+        <section class="interviews">
+            <h2>Legutóbbi Interjúink</h2>
+            <article>
+                <h3>Beszélgetés a diákönkormányzat elnökével a választásokról</h3>
+                <p>A DÖK munkájáról és terveikről kérdeztük...</p>
+            </article>
+            <article>
+                <h3>Tanáraink mesélnek</h3>
+                <p>Változások az oktatásban: Hogyan készülnek a tanárok az új tanévre?</p>
+            </article>
+            <!-- További interjúk -->
+        </section>
+    </main>
+    <main>
+        <section class="gallery">
+            <h2>Iskolai Képgaléria</h2>
+            <div class="image-grid">
+                <img src="C:\Users\emili\Downloads\images.png" alt="Logo">
+                <img src="https://www.rozsakertirefi.hu/wp-content/uploads/2024/01/muzsikusok24-1080x675.jpg" alt="Kép 2">
+                <img src="https://22.kerulet.ittlakunk.hu/files/ittlakunk/styles/large/public/upload/company/1256/rozsakerti_demjen_istvan_reformatus_gimnazium_mathe_zoltan_-_mti_reformatus.hu_.jpg" alt="Kép 3">
+                <!-- További képek -->
+            </div>
+        </section>
+    </main>
+     <footer>
+        <p>© 2024 Iskolai Újság</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
